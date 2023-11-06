@@ -1,7 +1,10 @@
+using MicroRabbit.MVC.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient<ITransferService , TransferService>();
 
 var app = builder.Build();
 
